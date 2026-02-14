@@ -172,7 +172,7 @@ Go from landing page to full SaaS in 30 seconds: **[omaship.com](https://omaship
 
 - 📧 **Email Support**: [support@omaship.com](mailto:support@omaship.com)
 - 💬 **Community**: [Join our Discord](https://discord.gg/omaship) 
-- 📚 **Documentation**: [docs.omaship.com](https://docs.omaship.com)
+- 📚 **Documentation**: [omaship.com](https://omaship.com)
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/bloomedai/omaship-landing/issues)
 
 ## ⭐ Show Your Support

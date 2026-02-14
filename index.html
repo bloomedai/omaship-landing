@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CUSTOMIZE: Change title for your product -->
+    <title>Your SaaS Landing Page - Ship Faster, Validate Smarter</title>
+    
+    <!-- CUSTOMIZE: Update description for your product -->
+    <meta name="description" content="Launch your SaaS idea in minutes with our proven landing page template. Convert visitors into customers with a battle-tested design.">
+    
+    <!-- CUSTOMIZE: Update keywords for your niche -->
+    <meta name="keywords" content="SaaS landing page, startup template, conversion optimization, product validation">
+    
+    <!-- Open Graph / Facebook -->
+    <!-- CUSTOMIZE: Update OG tags for social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Your SaaS Landing Page - Ship Faster, Validate Smarter">
+    <meta property="og:description" content="Launch your SaaS idea in minutes with our proven landing page template. Convert visitors into customers with a battle-tested design.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.png">
+    
+    <!-- Twitter -->
+    <!-- CUSTOMIZE: Update Twitter Card tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Your SaaS Landing Page - Ship Faster, Validate Smarter">
+    <meta property="twitter:description" content="Launch your SaaS idea in minutes with our proven landing page template. Convert visitors into customers with a battle-tested design.">
+    <meta property="twitter:image" content="https://yourdomain.com/og-image.png">
+    
+    <!-- Favicon -->
+    <!-- CUSTOMIZE: Add your favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Theme switcher functionality
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+        
+        // Load saved theme or default
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'corporate';
+            setTheme(savedTheme);
+            
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+            
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
+</head>
+
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown lg:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost">
+                    <i data-lucide="menu" class="h-5 w-5"></i>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- CUSTOMIZE: Replace with your logo and brand name -->
+            <a class="btn btn-ghost text-xl" href="#hero">
+                <i data-lucide="rocket" class="h-6 w-6"></i>
+                YourBrand
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#about" class="hover:text-primary">About</a></li>
+                <li><a href="#how-it-works" class="hover:text-primary">How It Works</a></li>
+                <li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="#testimonials" class="hover:text-primary">Testimonials</a></li>
+                <li><a href="#faq" class="hover:text-primary">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end space-x-2">
+            <!-- Theme Switcher -->
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-sm">
+                    <i data-lucide="palette" class="h-4 w-4"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a onclick="setTheme('corporate')">Corporate</a></li>
+                    <li><a onclick="setTheme('business')">Business</a></li>
+                    <li><a onclick="setTheme('emerald')">Emerald</a></li>
+                    <li><a onclick="setTheme('forest')">Forest</a></li>
+                    <li><a onclick="setTheme('lofi')">Lo-Fi</a></li>
+                    <li><a onclick="setTheme('pastel')">Pastel</a></li>
+                    <li><a onclick="setTheme('fantasy')">Fantasy</a></li>
+                    <li><a onclick="setTheme('wireframe')">Wireframe</a></li>
+                    <li><a onclick="setTheme('luxury')">Luxury</a></li>
+                    <li><a onclick="setTheme('dracula')">Dracula</a></li>
+                    <li><a onclick="setTheme('cmyk')">CMYK</a></li>
+                    <li><a onclick="setTheme('autumn')">Autumn</a></li>
+                </ul>
+            </div>
+            
+            <!-- CUSTOMIZE: Update CTA button text and link -->
+            <a href="#pricing" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero min-h-[90vh] bg-gradient-to-br from-base-200 to-base-300">
+        <div class="hero-content text-center max-w-4xl">
+            <div data-aos="fade-up">
+                <!-- CUSTOMIZE: Replace with your compelling headline -->
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Ship Your SaaS Idea in 
+                    <span class="text-primary">Minutes</span>, 
+                    Not Months
+                </h1>
+                
+                <!-- CUSTOMIZE: Replace with your value proposition -->
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-80">
+                    Stop overthinking and start shipping. Our proven landing page template converts visitors into customers so you can validate your idea fast.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <!-- CUSTOMIZE: Update primary CTA -->
+                    <a href="#pricing" class="btn btn-primary btn-lg">
+                        <i data-lucide="rocket" class="h-5 w-5"></i>
+                        Start Building Now
+                    </a>
+                    
+                    <!-- CUSTOMIZE: Update secondary CTA -->
+                    <a href="#how-it-works" class="btn btn-outline btn-lg">
+                        <i data-lucide="play-circle" class="h-5 w-5"></i>
+                        See How It Works
+                    </a>
+                </div>
+                
+                <!-- CUSTOMIZE: Update social proof line -->
+                <div class="flex items-center justify-center gap-2 text-sm opacity-70">
+                    <i data-lucide="check-circle" class="h-4 w-4 text-success"></i>
+                    <span>Join 2,000+ entrepreneurs who've shipped with this template</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update features section title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Everything You Need to Launch
+                </h2>
+                <!-- CUSTOMIZE: Update features section subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    Skip the months of design and development. Get a conversion-optimized landing page that's ready to launch.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <!-- CUSTOMIZE: Update feature 1 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="smartphone" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">Mobile-First Design</h3>
+                        <p class="opacity-70">Looks perfect on every device. Your customers browse on mobile, so should your landing page.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <!-- CUSTOMIZE: Update feature 2 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">Lightning Fast</h3>
+                        <p class="opacity-70">Pure HTML + CSS. No bloated frameworks or slow loading times. Speed equals conversions.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <!-- CUSTOMIZE: Update feature 3 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="search" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">SEO Optimized</h3>
+                        <p class="opacity-70">Built with semantic HTML and proper meta tags. Google will love your landing page.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <!-- CUSTOMIZE: Update feature 4 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="palette" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">12 Beautiful Themes</h3>
+                        <p class="opacity-70">Switch themes instantly. From professional corporate to modern dark mode - find your perfect look.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <!-- CUSTOMIZE: Update feature 5 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="code" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">Easy to Customize</h3>
+                        <p class="opacity-70">No coding required. Every element has clear instructions. Change text, colors, and images in minutes.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <!-- CUSTOMIZE: Update feature 6 content -->
+                <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-body text-center">
+                        <div class="mx-auto w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="trending-up" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="card-title justify-center">Conversion Tested</h3>
+                        <p class="opacity-70">Based on proven layouts that convert. Every section is designed to guide visitors toward your CTA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update how it works title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Launch in 3 Simple Steps
+                </h2>
+                <!-- CUSTOMIZE: Update how it works subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    From download to launch in less than an hour. No technical skills required.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Step 1 -->
+                <!-- CUSTOMIZE: Update step 1 content -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-content font-bold text-xl mb-6">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Download & Customize</h3>
+                    <p class="opacity-70">Clone the repo, open index.html, and replace the placeholder content with your product details. Takes 15 minutes.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <!-- CUSTOMIZE: Update step 2 content -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-content font-bold text-xl mb-6">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Deploy for Free</h3>
+                    <p class="opacity-70">Push to GitHub and enable Pages. Your landing page is live with a custom domain in minutes. Zero hosting costs.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <!-- CUSTOMIZE: Update step 3 content -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-content font-bold text-xl mb-6">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Start Collecting Signups</h3>
+                    <p class="opacity-70">Share your link and watch the conversions roll in. Validate your idea with real customers before building.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Team -->
+    <section id="about" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update about section title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Meet Your Team
+                </h2>
+                <!-- CUSTOMIZE: Update about section subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    Experienced builders who understand the struggle of shipping fast while maintaining quality.
+                </p>
+            </div>
+            
+            <div class="card bg-base-200 shadow-sm" data-aos="fade-up">
+                <div class="card-body">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <!-- CUSTOMIZE: Replace with team member photo -->
+                        <div class="avatar">
+                            <div class="w-32 rounded-full">
+                                <img src="https://via.placeholder.com/128x128/6366f1/ffffff?text=👨‍💻" alt="Team Member" />
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1 text-center md:text-left">
+                            <!-- CUSTOMIZE: Update team member bio -->
+                            <h3 class="text-2xl font-semibold mb-2">Your Name</h3>
+                            <p class="text-lg opacity-70 mb-4">
+                                Founder & Full-Stack Developer with 8+ years building SaaS products. 
+                                Shipped 12 profitable products, from MVP to $1M ARR.
+                            </p>
+                            
+                            <!-- CUSTOMIZE: Update skill badges -->
+                            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                                <span class="badge badge-primary">React</span>
+                                <span class="badge badge-primary">Node.js</span>
+                                <span class="badge badge-primary">Python</span>
+                                <span class="badge badge-primary">AWS</span>
+                                <span class="badge badge-primary">Product Strategy</span>
+                                <span class="badge badge-primary">Growth Hacking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update pricing section title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Simple, Honest Pricing
+                </h2>
+                <!-- CUSTOMIZE: Update pricing section subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    Choose the plan that fits your needs. All plans include lifetime updates and email support.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <!-- CUSTOMIZE: Update starter plan details -->
+                <div class="card bg-base-100 shadow-sm border" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">Starter</h3>
+                        <div class="text-3xl font-bold mb-4">
+                            $49
+                            <span class="text-lg font-normal opacity-70">one-time</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Landing page template</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>12 theme variations</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Mobile responsive</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>SEO optimized</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Email support</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline w-full">Get Starter</a>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <!-- CUSTOMIZE: Update pro plan details -->
+                <div class="card bg-base-100 shadow-lg border-primary border-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body">
+                        <div class="badge badge-primary">Most Popular</div>
+                        <h3 class="card-title text-2xl">Pro</h3>
+                        <div class="text-3xl font-bold mb-4">
+                            $99
+                            <span class="text-lg font-normal opacity-70">one-time</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Everything in Starter</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>5 additional page templates</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Advanced animations</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Form handling scripts</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-full">Get Pro</a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <!-- CUSTOMIZE: Update enterprise plan details -->
+                <div class="card bg-base-100 shadow-sm border" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">Enterprise</h3>
+                        <div class="text-3xl font-bold mb-4">
+                            $299
+                            <span class="text-lg font-normal opacity-70">one-time</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Everything in Pro</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Custom design consultation</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>White-label license</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>Multi-page templates</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-success"></i>
+                                <span>1:1 setup call</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline w-full">Get Enterprise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update testimonials section title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    What Our Customers Say
+                </h2>
+                <!-- CUSTOMIZE: Update testimonials section subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    Real feedback from entrepreneurs who shipped faster with our template.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <!-- CUSTOMIZE: Replace with real customer testimonial -->
+                <div class="card bg-base-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body">
+                        <div class="rating rating-sm mb-4">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                        </div>
+                        <p class="mb-4">"This template saved me weeks of work. I had my landing page live in 2 hours and got my first customer the same day. Incredible!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar">
+                                <div class="w-10 rounded-full">
+                                    <img src="https://via.placeholder.com/40x40/10b981/ffffff?text=S" alt="Customer" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Sarah Chen</div>
+                                <div class="text-sm opacity-70">Founder, TaskFlow</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <!-- CUSTOMIZE: Replace with real customer testimonial -->
+                <div class="card bg-base-200 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body">
+                        <div class="rating rating-sm mb-4">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        </div>
+                        <p class="mb-4">"The conversion rate on this template is insane. 23% signup rate on day one. My previous custom design never got above 8%."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar">
+                                <div class="w-10 rounded-full">
+                                    <img src="https://via.placeholder.com/40x40/3b82f6/ffffff?text=M" alt="Customer" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Mike Rodriguez</div>
+                                <div class="text-sm opacity-70">CEO, AnalyticsPro</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <!-- CUSTOMIZE: Replace with real customer testimonial -->
+                <div class="card bg-base-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-body">
+                        <div class="rating rating-sm mb-4">
+                            <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                        </div>
+                        <p class="mb-4">"Perfect for non-technical founders. Clear instructions, beautiful design, and the customer support is fantastic. Highly recommended!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar">
+                                <div class="w-10 rounded-full">
+                                    <img src="https://via.placeholder.com/40x40/f59e0b/ffffff?text=A" alt="Customer" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Alex Thompson</div>
+                                <div class="text-sm opacity-70">Founder, EcoTrack</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update FAQ section title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <!-- CUSTOMIZE: Update FAQ section subtitle -->
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">
+                    Everything you need to know about getting started with our landing page template.
+                </p>
+            </div>
+            
+            <div class="space-y-4" data-aos="fade-up">
+                <!-- FAQ 1 -->
+                <!-- CUSTOMIZE: Update FAQ 1 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        Do I need coding skills to use this template?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Not at all! The template uses clear HTML with detailed comments. You'll only need to edit text content, replace images, and update links. If you can edit a Word document, you can customize this template.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <!-- CUSTOMIZE: Update FAQ 2 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        Can I use this for commercial projects?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Yes! All plans include a commercial license. You can use the template for client projects, your own business, or even resell websites built with it (Enterprise plan required for white-label reselling).</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <!-- CUSTOMIZE: Update FAQ 3 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        How do I deploy this to my own domain?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>The template works with any web hosting service. We provide step-by-step guides for GitHub Pages (free), Netlify, Vercel, and traditional web hosts. Most customers are live within 30 minutes.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <!-- CUSTOMIZE: Update FAQ 4 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        Do you provide customer support?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Absolutely! All plans include email support. Pro and Enterprise customers get priority response (usually within 4 hours). We also have a detailed documentation site and video tutorials.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <!-- CUSTOMIZE: Update FAQ 5 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        Can I integrate with email marketing tools?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Yes! The template includes form handling examples for popular services like ConvertKit, Mailchimp, and Klaviyo. We also provide PHP and Node.js scripts for custom integrations.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <!-- CUSTOMIZE: Update FAQ 6 -->
+                <div class="collapse collapse-plus bg-base-100 shadow-sm">
+                    <input type="radio" name="faq" /> 
+                    <div class="collapse-title text-lg font-medium">
+                        What if I'm not satisfied with my purchase?
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>We offer a 30-day money-back guarantee. If you're not completely happy with the template or our support, just email us for a full refund. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- CUSTOMIZE: Update final CTA title -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ready to Ship Your Idea?
+                </h2>
+                <!-- CUSTOMIZE: Update final CTA subtitle -->
+                <p class="text-lg md:text-xl opacity-80 mb-8">
+                    Join thousands of entrepreneurs who chose speed over perfection and built profitable businesses.
+                </p>
+                <!-- CUSTOMIZE: Update final CTA button -->
+                <a href="#pricing" class="btn btn-primary btn-lg">
+                    <i data-lucide="rocket" class="h-5 w-5"></i>
+                    Get Your Template Now
+                </a>
+                
+                <!-- CUSTOMIZE: Update money-back guarantee text -->
+                <p class="mt-4 text-sm opacity-70">
+                    <i data-lucide="shield-check" class="h-4 w-4 inline"></i>
+                    30-day money-back guarantee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <div class="grid grid-flow-col gap-4">
+            <!-- CUSTOMIZE: Update footer links -->
+            <a href="#about" class="link link-hover">About</a>
+            <a href="#pricing" class="link link-hover">Pricing</a>
+            <a href="#faq" class="link link-hover">FAQ</a>
+            <a href="mailto:support@yourdomain.com" class="link link-hover">Contact</a>
+        </div>
+        
+        <div class="grid grid-flow-col gap-4">
+            <!-- CUSTOMIZE: Update social media links -->
+            <a href="https://twitter.com/yourbrand" class="link text-2xl hover:text-primary" aria-label="Twitter">
+                <i data-lucide="twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/yourbrand" class="link text-2xl hover:text-primary" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com/yourbrand" class="link text-2xl hover:text-primary" aria-label="GitHub">
+                <i data-lucide="github"></i>
+            </a>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-2 text-sm opacity-70">
+            <!-- CUSTOMIZE: Update copyright and company name -->
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <span class="hidden sm:inline">•</span>
+            <a href="/privacy" class="link link-hover">Privacy Policy</a>
+            <span>•</span>
+            <a href="/terms" class="link link-hover">Terms of Service</a>
+        </div>
+        
+        <!-- Omaship Attribution (keep this for free template) -->
+        <div class="text-xs opacity-50">
+            Built with <a href="https://github.com/bloomedai/omaship-landing" class="link link-hover">Omaship Landing</a>
+            · Ready to ship the real thing? → <a href="https://omaship.com" class="link link-hover font-medium">omaship.com</a>
+        </div>
+    </footer>
+</body>
+</html>
